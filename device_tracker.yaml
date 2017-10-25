@@ -1,0 +1,3 @@
+  - platform: unifi
+    username: !secret unifi_username
+    password: !secret unifi_password

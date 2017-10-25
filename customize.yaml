@@ -1,0 +1,2 @@
+binary_sensor.doorbell_ringing:
+   friendly_name: Doorbell

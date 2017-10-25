@@ -1,0 +1,15 @@
+  - platform: control4
+    base_url: 'http://192.168.200.193:9000/'
+    proxy_id: 909
+    name: Second floor
+    scan_interval: 10
+  - platform: control4
+    base_url: 'http://192.168.200.193:9000/'
+    proxy_id: 905
+    name: Main floor
+    scan_interval: 10
+  - platform: control4
+    base_url: 'http://192.168.200.193:9000/'
+    proxy_id: 903
+    name: Basement
+    scan_interval: 10
