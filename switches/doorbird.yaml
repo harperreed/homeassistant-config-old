@@ -1,0 +1,4 @@
+ - platform: doorbird
+   switches:
+    - light_on
+    - open_door
