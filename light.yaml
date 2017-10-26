@@ -104,7 +104,7 @@
   proxy_id: 773
   scan_interval: 10
 - base_url: http://192.168.200.193:9000/
-  name: Upper Bedroom Pendants
+  name: Upstairs Bedroom Pendants
   platform: control4
   proxy_id: 279
   scan_interval: 10

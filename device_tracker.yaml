@@ -1,3 +1,14 @@
-  - platform: unifi
-    username: !secret unifi_username
-    password: !secret unifi_password
+- platform: unifi
+  username: !secret unifi_username
+  password: !secret unifi_password
+- platform: automatic
+  client_id: !secret automatic_client_id
+  secret: !secret automatic_secret
+- platform: snmp
+  host: !secret router_ip
+  community: public
+  baseoid: 1.3.6.1.2.1.4.22.1.2.10
+- platform: owntracks
+# - platform: nmap_tracker
+#  hosts: 192.168.200.1/24
+#  home_interval: 10

@@ -1,0 +1,21 @@
+default: error
+logs:
+# works, integration from 
+# https://github.com/arsaboo/homeassistant-config/blob/master/custom_components/sensor/life360.py
+    custom_components.sensor.life360: warn
+# works, missing battery levels
+    homeassistant.components.zwave: warn
+# works
+    homeassistant.components.image_processing: warn
+# works
+    homeassistant.components.device_tracker: warn
+# works
+    homeassistant.components.sensor: warn
+# works, hacked in from 
+# https://github.com/scottjgibson/home-assistant/tree/dev/homeassistant/components
+    homeassistant.components.lutron: warn
+# works
+    homeassistant.components.camera: fatal
+# buggy
+    custom_components: debug
+    homeassistant.components.tesla: debug

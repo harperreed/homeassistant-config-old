@@ -73,8 +73,7 @@ def async_setup_platform(hass, config, async_add_devices, discovery_info=None):
     proxy_id = config.get(CONF_PROXY_ID)
     timeout = config.get(CONF_TIMEOUT)
 
-    yield from async_add_devices(
-        [C4ClimateDevice(hass, name, base_url, proxy_id, timeout)])
+    async_add_devices([C4ClimateDevice(hass, name, base_url, proxy_id, timeout)])
 
 class C4ClimateDevice(ClimateDevice):
 

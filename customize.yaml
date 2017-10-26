@@ -1,2 +1,4 @@
 binary_sensor.doorbell_ringing:
    friendly_name: Doorbell
+camera.doorbird_live:
+   friendly_name: Doorbell

@@ -43,9 +43,12 @@ def async_setup_platform(hass, config, async_add_devices, discovery_info=None):
     base_url = config.get(CONF_BASE_URL)
     proxy_id = config.get(CONF_PROXY_ID)
     timeout = config.get(CONF_TIMEOUT)
+    logging.debug(name)
+    logging.debug(base_url)
+    logging.debug(proxy_id)
+    logging.debug(timeout)
 
-    yield from async_add_devices(
-        [C4Light(hass, name, base_url, proxy_id, timeout)])
+    async_add_devices([C4Light(hass, name, base_url, proxy_id, timeout)])
 
 class C4Light(Light):
 
@@ -134,8 +137,15 @@ class C4Light(Light):
             with async_timeout.timeout(self._timeout, loop=self.hass.loop):
                 request = yield from websession.get(url)
                 text = yield from request.text()
-        except (asyncio.TimeoutError, aiohttp.ClientError, asyncio.CancelledError):
-            _LOGGER.exception("Error while fetch data.")
+                _LOGGER.debug(text)
+        except(asyncio.TimeoutError):
+            _LOGGER.exception("Timeout error while fetch data: "+ url)
+            return
+        except(aiohttp.ClientError):
+            _LOGGER.exception("Client error while fetch data.")
+            return
+        except(asyncio.CancelledError):
+            _LOGGER.exception("Cancelled error while fetch data.")
             return
         finally:
             if request is not None:

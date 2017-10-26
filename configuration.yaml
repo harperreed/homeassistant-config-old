@@ -77,10 +77,23 @@ switch:
       - light_on
       - open_door
 
-#tesla:
-#  username: !secret tesla_username
-#  password: !secret tesla_password
-#  scan_interval: 300
+
+nest:
+  client_id: !secret nest_id
+  client_secret: !secret nest_key
+  sensors:
+    monitored_conditions:
+      - 'co_status'
+      - 'smoke_status'
+      - 'battery_health'
+  binary_sensors:
+    monitored_conditions:
+      - 'online'
+
+tesla:
+  username: !secret tesla_username
+  password: !secret tesla_password
+  scan_interval: 300
 
 #lutron_caseta:
 #    host: 192.168.200.58
@@ -90,11 +103,13 @@ doorbird:
   username: !secret doorbird_username
   password: !secret doorbird_password
 
+logger: !include logger.yaml
 binary_sensor: !include binary_sensor.yaml
 media_player: !include media_player.yaml
 device_tracker: !include device_tracker.yaml
 sensor: !include sensor.yaml
 camera: !include camera.yaml
+image_processing: !include image_processing.yaml
 light: !include light.yaml
 climate: !include climate.yaml
 group: !include groups.yaml
