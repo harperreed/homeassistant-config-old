@@ -1,0 +1,21 @@
+- platform: bayesian
+  prior: 0.5
+  name: 'Hiromi Nakazawa'
+  probability_threshold: 0.5
+  observations:
+    - entity_id: device_tracker.hiromi_hiromi
+      prob_given_true: 0.9
+      prob_given_false: 0.1
+      platform: 'state'
+      to_state: 'home'
+    - entity_id: !secret hiromi_iphone
+      prob_given_true: 0.9
+      prob_given_false: 0.1
+      platform: 'state'
+      to_state: 'home'
+    - entity_id: !secret automatic_car
+      prob_given_true: 0.2
+      prob_given_false: 0.8
+      platform: 'state'
+      to_state: 'home'
+

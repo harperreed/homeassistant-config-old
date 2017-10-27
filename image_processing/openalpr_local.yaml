@@ -1,0 +1,5 @@
+ - platform: openalpr_local
+   region: us
+   source:
+    - entity_id: camera.garage_back_west
+    - entity_id: camera.garage_back_east

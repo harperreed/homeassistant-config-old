@@ -1,0 +1,192 @@
+## --- floor groups
+
+basement:
+    name: Basement
+    icon: mdi:floor-plan
+    view: yes
+    entities:
+      - group.media_room
+      - group.lower_bed_1
+      - group.lower_bed_2
+
+first_floor:
+    name: First Floor
+    icon: mdi:floor-plan
+    view: yes
+    entities:
+      - group.deck
+      - group.dining_room
+      - group.kitchen
+      - group.powder_room
+      - group.living_room
+      - group.foyer
+      - group.mudroom
+
+
+second_floor:
+    name: Second FLoor
+    icon: mdi:floor-plan
+    view: yes
+    entities:
+      - group.office
+      - group.nook
+      - group.hallway
+      - group.master_bedroom
+      - group.master_bathroom
+      - group.upstairs_guest_bedroom
+      - group.upstairs_guest_bathroom
+
+
+garage:
+    name: Garage
+    icon: mdi:garage
+    view: yes
+    entities:
+      - camera.garage
+      - camera.garage_back_west
+      - camera.garage_back_east
+      - camera.garage_wireless
+      - camera.garage_entryway
+      - !secret automatic_car
+
+## --- Basement
+
+media_room:
+  name: Media Room
+  entities: 
+    - light.media_room_bar_lights
+    - light.media_room_lower_hall
+    - light.media_room_north_cans
+    - light.media_room_south_cans
+    - light.media_room_stairs_to_basement
+    - light.media_room_tv_lights
+
+lower_bed_1:
+  name: Lower Bedroom 1
+  entities:
+    - light.lower_bed_1_left_cube
+    - light.lower_bed_1_overhead
+    - light.lower_bed_1_right_cube
+
+lower_bed_2:
+  name: Lower Bedroom 2
+  entities:
+    - light.lower_bed_2_overhead
+
+lower_bathroom:
+  name: Lower Bathroom
+  entities:
+    - light.lower_bathroom_mirror
+    - light.lower_bathroom_shower
+
+## --- First Floor
+
+kitchen:
+    name: Kitchen
+    entities:
+      - light.kitchen_cans
+      - light.kitchen_island_pendants
+      - light.kitchen_stairs_to_2nd
+
+living_room:
+    name: Living Room
+    entities:
+      - light.living_room_cans
+      - light.living_room_floor_lamp
+      - light.living_room_hue
+      - light.living_room_wireless_outlet
+   
+
+dining_room:
+    name: Dining Room 
+    entities:
+      - light.dining_room_cans
+      - light.dining_room_front_bunny
+      - light.dining_room_pendant
+
+foyer:
+    name: Foyer
+    entities:
+      - light.foyer_exterior
+      - light.foyer
+      - switch.open_door
+      - switch.open_door
+      - binary_sensor.doorbell_ringing
+
+mudroom:
+    name: Mudroom
+    entities:
+      - light.mud_room
+
+powder_room:
+    name: Powder Room
+    entities:
+      - light.powder_room_sconce
+      - light.powder_room_pendant
+
+deck:
+  name: Deck
+  entities:
+    - light.deck_lights
+
+### --- Upstairs
+
+upstairs_guest_bedroom:
+    name: Upstairs Guest Bedroom
+    entities:
+       - light.upstairs_bedroom_cans
+       - light.upstairs_bedroom_pendants
+
+upstairs_guest_bathroom:
+    name: Upstairs Guest Bathroom
+    entities:
+       - light.upstairs_bathroom_cans
+       - light.upstairs_bathroom_shower
+       - light.upstairs_bathroom_vanity
+       - light.upstairs_bathroom_toilet
+
+upstairs_hallway:
+  name: Upstairs Hallway
+  entities:
+    - light.hall_light
+    - light.hall_outlets
+    - light.stairs_to_1st
+
+laundry_room:
+  name: Laundry Room
+  entities:
+    - light.laundry_sconce
+
+nook:
+    name: Nook
+    entities:
+       - light.nook_pendant
+       - light.nook_reading_lamp
+       - light.nook_hue_bloom
+
+office:
+  name: Office
+  entities:
+    - light.office_can
+    - light.office_hue_go
+
+
+master_bedroom:
+  name: Master Bedroom
+  entities:
+    - light.master_bedroom_can_lights
+    - light.master_bedroom_closet
+    - light.master_bedroom_hallway
+    - light.master_bedroom_reading_lamp_left
+    - light.master_bedroom_reading_lamp_right
+    - light.master_bedroom_rope_lights
+
+master_bathroom:
+  name: Master Bathroom
+  entities:
+    - light.master_bathroom_cans
+    - light.master_bathroom_shower
+    - light.master_bathroom_toilet
+    - light.master_bathroom_tub
+    - light.master_bathroom_vanity_lights
+

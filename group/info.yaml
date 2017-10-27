@@ -1,0 +1,8 @@
+info:
+    name: Information
+    entities:
+       - sensor.date
+       - sensor.fastcom_download
+       - sensor.time
+       - binary_sensor.workday
+       - sun.sun

@@ -1,0 +1,5 @@
+people:
+    name: People
+    entities:
+       - binary_sensor.harper_reed
+       - binary_sensor.hiromi_nakazawa

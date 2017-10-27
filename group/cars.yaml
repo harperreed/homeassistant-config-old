@@ -1,0 +1,4 @@
+cars:
+    name: Car
+    entities:
+       - device_tracker.volkswagen_golf_gti

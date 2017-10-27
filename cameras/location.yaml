@@ -1,0 +1,8 @@
+- platform: generic
+  name: Harper Reed Map
+  still_image_url: https://maps.googleapis.com/maps/api/staticmap?autoscale=2&size=500x500&maptype=roadmap&format=png&visual_refresh=true&markers=icon:https://reedazawa.com/imgs/d376ebba-2f33-4a5e-b322-1d87b2183f96.png%7Cshadow:true%7C{{ states.device_tracker.harper_harper.attributes.latitude }},{{ states.device_tracker.harper_harper.attributes.longitude }}&key={{ !secret google_maps_key }}
+  limit_refetch_to_url_change: true
+- platform: generic
+  name: Hiromi Nakazawa Map
+  still_image_url: https://maps.googleapis.com/maps/api/staticmap?autoscale=2&size=500x500&maptype=roadmap&format=png&visual_refresh=true&markers=icon:https://reedazawa.com/imgs/5d93a15e-02fc-4791-ab56-06b1dd6e20d2.png%7Cshadow:true%7C{{ states.device_tracker.hiromi_hiromi.attributes.latitude }},{{ states.device_tracker.hiromi_hiromi.attributes.longitude }}&key={{ !secret google_maps_key }}
+  limit_refetch_to_url_change: true

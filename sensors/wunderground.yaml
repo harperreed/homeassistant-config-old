@@ -12,4 +12,3 @@
       - wind_kph
       - wind_1d_kph
       - alerts
-- platform: plex

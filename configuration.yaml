@@ -13,7 +13,8 @@ homeassistant:
   time_zone: America/Chicago
 
   # Customization file
-  customize: !include customize.yaml
+  customize: !include_dir_merge_named customize
+  packages: !include_dir_named packages
 
 zone:
   name: Home
@@ -72,22 +73,22 @@ tts:
   - platform: google
 
 
-nest:
-  client_id: !secret nest_id
-  client_secret: !secret nest_key
-  sensors:
-    monitored_conditions:
-      - 'co_status'
-      - 'smoke_status'
-      - 'battery_health'
-  binary_sensors:
-    monitored_conditions:
-      - 'online'
+#nest:
+#  client_id: !secret nest_id
+#  client_secret: !secret nest_key
+#  sensors:
+#    monitored_conditions:
+#      - 'co_status'
+#      - 'smoke_status'
+#      - 'battery_health'
+#  binary_sensors:
+#    monitored_conditions:
+#      - 'online'
 
-#tesla:
-#  username: !secret tesla_username
-#  password: !secret tesla_password
-#  scan_interval: 300
+tesla:
+  username: !secret tesla_username
+  password: !secret tesla_password
+  scan_interval: 300
 
 #lutron_caseta:
 #    host: 192.168.200.58
@@ -97,8 +98,11 @@ doorbird:
   username: !secret doorbird_username
   password: !secret doorbird_password
 
+mqtt:
+
+group: !include_dir_merge_named group
 logger: !include logger.yaml
-recorder: !include recorder.yam
+recorder: !include recorder.yaml
 switch: !include_dir_merge_list switches
 binary_sensor: !include_dir_merge_list binary_sensors
 media_player: !include_dir_merge_list media_players
@@ -108,6 +112,5 @@ camera: !include_dir_merge_list cameras
 image_processing: !include_dir_merge_list image_processing
 light: !include_dir_merge_list lights
 climate: !include_dir_merge_list climate
-group: !include_dir_merge_list groups
 automation: !include_dir_merge_list automations
 script: !include_dir_merge_list scripts

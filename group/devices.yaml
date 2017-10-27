@@ -1,0 +1,11 @@
+devices:
+    name: Devices
+    entities:
+       - device_tracker.4098ad0946dc
+       - device_tracker.784f437e14bb
+       - device_tracker.a8667f051959
+       - device_tracker.harper_harper
+       - device_tracker.hiromi_hiromi
+
+
+
