@@ -8,9 +8,9 @@
 sensor:
   - platform: template
     sensors:
-        withings_scale:
-          friendly_name: 'WiThings Scale'
-          value_template: "{{ 'Online' if is_state('device_tracker.withings_scale', 'home') else 'Offline' }}"
+        nucs:
+          friendly_name: 'Nuc Docker Host'
+          value_template: "{{ 'Online' if is_state('device_tracker.f44d3065a710', 'home') else 'Offline' }}"
 
 #-------------------------------------------
 group:
@@ -18,11 +18,13 @@ group:
     entities:
       - sensor.ha_installed_version
       - sensor.ha_uptime
-      - sensor.since_last_boot_templated
       - sensor.disk_used_
-      - sensor.speedtest_download
       - sensor.fastcom_download
+      - sensor.external_ip
       - sensor.speedtest_upload
+      - sensor.speedtest_download
+      - sensor.shodan_sensor
+      - sensor.nucs
 
 
 #-------------------------------------------#-------------------------------------------
@@ -32,7 +34,7 @@ automation:
     trigger:
          - platform: state
            entity_id:
-             - sensor.withings_scale
+             - sensor.nucs
            to: 'offline'
            for:
              minutes: 5
