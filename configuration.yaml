@@ -92,6 +92,12 @@ tesla:
 
 #lutron_caseta:
 #    host: 192.168.200.58
+#
+
+
+twilio:
+    account_sid: !secret twilio_sid
+        auth_token: !secret twilio_secret
 
 doorbird:
   host: 192.168.200.128
@@ -100,11 +106,14 @@ doorbird:
 
 mqtt:
 
+
+
 group: !include_dir_merge_named group
 logger: !include logger.yaml
 recorder: !include recorder.yaml
 switch: !include_dir_merge_list switches
 binary_sensor: !include_dir_merge_list binary_sensors
+notify: !include_dir_merge_list notify
 media_player: !include_dir_merge_list media_players
 device_tracker: !include_dir_merge_list device_tracker
 sensor: !include_dir_merge_list sensors
