@@ -1,0 +1,3 @@
+- platform: shodan
+  api_key: BxRiw80svTfBoI9o7hMp65WSLgktnPFL
+  query: !secret wan_ip
