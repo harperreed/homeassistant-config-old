@@ -2,3 +2,16 @@ cars:
     name: Car
     entities:
        - device_tracker.volkswagen_golf_gti
+
+tesla:
+  name: Model S
+  entities:
+       - binary_sensor.tesla_model_s_5yjsa1e21hf189714_charger_sensor
+       - binary_sensor.tesla_model_s_5yjsa1e21hf189714_parking_brake_sensor
+       - climate.tesla_model_s_5yjsa1e21hf189714_hvac_climate_system
+       - lock.tesla_model_s_5yjsa1e21hf189714_door_lock
+       - sensor.tesla_model_s_5yjsa1e21hf189714_battery_sensor
+       - sensor.tesla_model_s_5yjsa1e21hf189714_temperature_sensor_inside
+       - sensor.tesla_model_s_5yjsa1e21hf189714_temperature_sensor_outside
+       - switch.tesla_model_s_5yjsa1e21hf189714_charger_switch  
+         
