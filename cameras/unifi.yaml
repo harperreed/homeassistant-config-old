@@ -1,4 +1,0 @@
-  - platform: uvc
-    nvr: 192.168.200.7
-    key: !secret nvr_api_key
-    password: !secret nvr_camera_password

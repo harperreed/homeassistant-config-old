@@ -1,7 +1,0 @@
-# somewhat reliabily indicates whether or not it sees a face. 
-#  I'm impressed.  It can trigger a second stage of recognition
-#  with minimal training
-#
-- platform: dlib_face_detect
-  source:
-      - entity_id: camera.doorbird_live

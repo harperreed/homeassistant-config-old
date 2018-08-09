@@ -1,8 +1,0 @@
-- platform: generic
-  name: Harper Reed Map
-  still_image_url: !secret harper_map_url
-  limit_refetch_to_url_change: true
-- platform: generic
-  name: Hiromi Nakazawa Map
-  still_image_url: !secret hiromi_map_url
-  limit_refetch_to_url_change: true

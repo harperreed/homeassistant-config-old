@@ -1,5 +1,0 @@
-- platform: unifi
-  username: !secret unifi_username
-  password: !secret unifi_password
-  host: 192.168.200.179
-  verify_ssl: false

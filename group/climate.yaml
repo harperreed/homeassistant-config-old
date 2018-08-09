@@ -1,6 +1,0 @@
-climate:
-    name: Climate
-    entities:
-      - climate.basement
-      - climate.main_floor
-      - climate.second_floor

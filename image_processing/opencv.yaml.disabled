@@ -1,4 +1,0 @@
- - platform: opencv
-   source:
-    - entity_id: camera.garage_back_west
-    - entity_id: camera.garage_back_east
