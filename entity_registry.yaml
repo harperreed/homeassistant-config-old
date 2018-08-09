@@ -1,0 +1,15 @@
+media_player.media_room:
+  config_entry_id:
+  name:
+  platform: apple_tv
+  unique_id: 51eb4c88b4c5682369d92b0beb2a9d9ff930eb083b90b1e7a99a4c767e8dac33
+remote.media_room:
+  config_entry_id:
+  name:
+  platform: apple_tv
+  unique_id: 51eb4c88b4c5682369d92b0beb2a9d9ff930eb083b90b1e7a99a4c767e8dac33
+media_player.media_room_2:
+  config_entry_id:
+  name:
+  platform: roku
+  unique_id: YP00CY032501
